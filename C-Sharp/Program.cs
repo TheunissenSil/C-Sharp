@@ -11,7 +11,6 @@
             words.Add("Second");
             words.Add("Third");
 
-            // Remember, this is how you print all the items in a list
             words.ForEach(Console.WriteLine);
 
             RemoveLast(words);
@@ -25,6 +24,10 @@
             PrintArrayInStars(array);
 
             // ----------------------------------------------
+            // Exercise 3-28 --------------------------------
+            Opd3_28();
+
+            // ----------------------------------------------
         }
 
         public static void RemoveLast(List<string> words)
@@ -32,7 +35,7 @@
             // Exercise 3-16
             if (words.Count > 0)
             {
-                words.RemoveAt(words.Count - 1);    
+                words.RemoveAt(words.Count - 1);
             }
         }
 
@@ -43,6 +46,22 @@
             {
                 String stars = new String('*', array[i]);
                 Console.WriteLine(stars);
+            }
+        }
+
+        public static void Opd3_28()
+        {
+            while (true)
+            {
+                string input = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(input)) {
+                    break;
+                } else {
+                    string[] parts = input.Split(' ');
+                    if (parts.Length > 0) {
+                        Console.WriteLine(parts[parts.Length - 1]);
+                    }
+                }
             }
         }
 
