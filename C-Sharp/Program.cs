@@ -40,6 +40,10 @@
             //Opd3_31();
 
             // ----------------------------------------------
+            // Exercise 4-21 --------------------------------
+            Opd4_21();
+
+            // ----------------------------------------------
         }
 
         public static void RemoveLast(List<string> words)
@@ -214,6 +218,47 @@
 
             Console.WriteLine("Longest name: " + name);
             Console.WriteLine("Highest age: " + maxAge);
+        }
+
+        public static void Opd4_21()
+        {
+            List<Book> books = new List<Book>();
+
+            while (true)
+            {
+                Console.Write("Name: ");
+                string name = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(name)) break;
+
+                Console.Write("Pages: ");
+                int pages = int.Parse(Console.ReadLine());
+
+                Console.Write("Publication year: ");
+                int year = int.Parse(Console.ReadLine());
+
+                books.Add(new Book(name, pages, year));
+            }
+
+            Console.Write("What information will be printed? ");
+            string printOption = Console.ReadLine().ToLower();
+
+            switch (printOption)
+            {
+                case "everything":
+                    foreach (Book book in books)
+                    {
+                        Console.WriteLine(book.ToString());
+                    }
+                    break;
+                case "title":
+                    foreach (Book book in books)
+                    {
+                        Console.WriteLine(book.Title);
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
 
     }
