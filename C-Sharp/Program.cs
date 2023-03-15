@@ -41,7 +41,11 @@
 
             // ----------------------------------------------
             // Exercise 4-21 --------------------------------
-            Opd4_21();
+            //Opd4_21();
+
+            // ----------------------------------------------
+            // Exercise 4-22 --------------------------------
+            Opd4_22();
 
             // ----------------------------------------------
         }
@@ -259,6 +263,30 @@
                 default:
                     break;
             }
+        }
+
+        public static void Opd4_22()
+        {
+            int count = 0;
+
+            Console.WriteLine("Input a string: ");
+
+            while (true)
+            {
+                string input = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(input)) Console.WriteLine("This is not a valdid string!");
+
+                if (input == "end")
+                {
+                    break;
+                } else
+                {
+                    count++;
+                }
+            }
+
+            Console.WriteLine(count);
+
         }
 
     }
