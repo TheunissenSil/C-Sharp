@@ -45,7 +45,11 @@
 
             // ----------------------------------------------
             // Exercise 4-22 --------------------------------
-            Opd4_22();
+            //Opd4_22();
+
+            // ----------------------------------------------
+            // Exercise 4-23 --------------------------------
+            Opd4_23();
 
             // ----------------------------------------------
         }
@@ -286,6 +290,35 @@
             }
 
             Console.WriteLine(count);
+
+        }
+
+        public static void Opd4_23()
+        {
+            int count = 0;
+
+            Console.WriteLine("Input a string: ");
+
+            while (true)
+            {
+                string input = Console.ReadLine();
+
+                int.TryParse(input, out int number);
+
+                if (string.IsNullOrWhiteSpace(input)) Console.WriteLine("This is not a valdid string!");
+
+                if (input == "end")
+                {
+                    break;
+                }
+                else
+                {
+                    number = number * number * number;
+                    Console.WriteLine(number);
+                }
+            }
+
+            Console.WriteLine("end");
 
         }
 
