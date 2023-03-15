@@ -49,7 +49,11 @@
 
             // ----------------------------------------------
             // Exercise 4-23 --------------------------------
-            Opd4_23();
+            //Opd4_23();
+
+            // ----------------------------------------------
+            // Exercise 4-24 --------------------------------
+            Opd4_24();
 
             // ----------------------------------------------
         }
@@ -283,7 +287,8 @@
                 if (input == "end")
                 {
                     break;
-                } else
+                }
+                else
                 {
                     count++;
                 }
@@ -322,5 +327,21 @@
 
         }
 
+        public static void Opd4_24()
+        {
+            string filePath = "C:\\Users\\theun\\OneDrive - ROC Nijmegen\\Documenten\\ROC\\Leerjaar 2\\C#\\C-Sharp\\C-Sharp\\Data.txt";
+            if (File.Exists(filePath))
+            {
+                string[] lines = File.ReadAllLines(filePath);
+                foreach (string line in lines)
+                {
+                    Console.WriteLine(line);
+                }
+            }
+            else
+            {
+                Console.WriteLine($"File {filePath} not found.");
+            }
+        }
     }
 }
