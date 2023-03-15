@@ -53,7 +53,11 @@
 
             // ----------------------------------------------
             // Exercise 4-24 --------------------------------
-            Opd4_24();
+            //Opd4_24();
+
+            // ----------------------------------------------
+            // Exercise 4-26 --------------------------------
+            Opd4_26();
 
             // ----------------------------------------------
         }
@@ -343,5 +347,37 @@
                 Console.WriteLine($"File {filePath} not found.");
             }
         }
+
+        public static void Opd4_26()
+        {
+            string[] lines = File.ReadAllLines(@"C:\Users\theun\OneDrive - ROC Nijmegen\Documenten\ROC\Leerjaar 2\C#\C-Sharp\C-Sharp\names.txt");
+            string[] lines2 = File.ReadAllLines(@"C:\Users\theun\OneDrive - ROC Nijmegen\Documenten\ROC\Leerjaar 2\C#\C-Sharp\C-Sharp\other-names.txt");
+            
+            string[] combined = lines.Concat(lines2).ToArray();
+
+            Console.WriteLine("Enter names, an empty line quits.");
+
+            while (true)
+            {
+                string name = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(name))
+                {
+                    break;
+                }
+
+                if (Array.Exists(combined, guest => guest.Equals(name, StringComparison.OrdinalIgnoreCase)))
+                {
+                    Console.WriteLine("The name is on the list.");
+                }
+                else
+                {
+                    Console.WriteLine("The name is not on the list.");
+                }
+            }
+
+            Console.WriteLine("\nThank you!");
+        }
+
     }
 }
