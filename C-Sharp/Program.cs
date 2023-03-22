@@ -84,6 +84,23 @@ namespace C_Sharp
             Person lilo = new Person("Mike", toothless);
             Console.WriteLine(lilo);
             // ----------------------------------------------
+            // ----------------------------------------------
+            Console.WriteLine("-------------------- --------------------------");
+            // Exercise 5-11 --------------------------------
+            Song jackSparrow = new Song("The Lonely Island", "Jack Sparrow", 196);
+            Song anotherSparrow = new Song("The Lonely Island", "Jack Sparrow", 196);
+            Song test = new Song("The Lonely Island", "Jack Sparrow", 195);
+
+            if (jackSparrow.Equals(anotherSparrow))
+            {
+                Console.WriteLine("Songs are equal.");
+            }
+
+            if (jackSparrow.Equals(test))
+            {
+                Console.WriteLine("Strange things are afoot.");
+            }
+            // ----------------------------------------------
 
         }
 
