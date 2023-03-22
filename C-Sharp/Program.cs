@@ -36,6 +36,45 @@ namespace C_Sharp
             Console.WriteLine("weighings performed: " + childrensHospital.weighings);
 
             // ----------------------------------------------
+            Console.WriteLine("----------------------------------------------");
+            // Exercise 5-8 --------------------------------
+            // Card
+            PaymentCard petesCard = new PaymentCard(10);
+
+            Console.WriteLine("money " + petesCard.balance);
+            bool wasSuccessful = petesCard.TakeMoney(8);
+            Console.WriteLine("successfully withdrew: " + wasSuccessful);
+            Console.WriteLine("money " + petesCard.balance);
+
+            wasSuccessful = petesCard.TakeMoney(4);
+            Console.WriteLine("successfully withdrew: " + wasSuccessful);
+            Console.WriteLine("money " + petesCard.balance);
+
+            // Terminal
+            PaymentTerminal lunchCafeteria = new PaymentTerminal();
+            Console.WriteLine(lunchCafeteria);
+
+            PaymentCard annesCard = new PaymentCard(2);
+
+            Console.WriteLine("amount of money on the card is " + annesCard.balance + " euros");
+
+            bool wasSuccessful1 = lunchCafeteria.EatLunch(annesCard);
+            Console.WriteLine("there was enough money: " + wasSuccessful1);
+
+            lunchCafeteria.AddMoneyToCard(annesCard, 100);
+
+            wasSuccessful1 = lunchCafeteria.EatLunch(annesCard);
+            Console.WriteLine("there was enough money: " + wasSuccessful1);
+
+            Console.WriteLine("amount of money on the card is " + annesCard.balance + " euros");
+
+            Console.WriteLine(lunchCafeteria);
+            // ----------------------------------------------
+        }
+
+        public static void Opd5_8()
+        {
+
         }
     }
 }
