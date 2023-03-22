@@ -119,10 +119,39 @@ namespace C_Sharp
             Console.WriteLine("The date after 790 days from the examined Friday is ... try it out yourself!");
             // Console.WriteLine("Try " + date.AfterNumberOfDays(790));
             // ----------------------------------------------
+            Console.WriteLine("-------------------- --------------------------");
+            // Exercise 5-15 --------------------------------
+            Money money = new Money(100, 00);
+            Money moreMoney = new Money(500, 50);
+
+            Money combined = money.Plus(moreMoney);
+
+            Console.WriteLine(money);
+            Console.WriteLine(moreMoney);
+            Console.WriteLine(combined);
+
+            Money lessMoney = moreMoney.Minus(money);
+
+            Console.WriteLine(money);
+            Console.WriteLine(moreMoney);
+            Console.WriteLine(lessMoney);
+
+            lessMoney = lessMoney.Minus(money);
+
+            Console.WriteLine(money);
+            Console.WriteLine(moreMoney);
+            Console.WriteLine(lessMoney);
+
+            Console.WriteLine(lessMoney.LessThan(moreMoney));
+            Console.WriteLine(lessMoney.LessThan(money));
+
+            lessMoney = lessMoney.Minus(moreMoney);
+            Console.WriteLine(lessMoney);
+            // ----------------------------------------------
 
         }
 
-        public static void Opd5_14()
+        public static void Opd5_15()
         {
 
         }
