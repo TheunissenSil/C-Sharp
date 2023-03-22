@@ -6,24 +6,22 @@ using System.Threading.Tasks;
 
 namespace C_Sharp
 {
-    public class Person
+    public class Pet
     {
         public string name;
-        public object pet;
+        public string type;
 
         // Constructor to set all the variables.
         // The two constructors above call this when they are used.
-        public Person(string name, object pet)
+        public Pet(string name, String type)
         {
             this.name = name;
-            this.pet = pet;
-            
+            this.type = type;
         }
 
         public override string ToString()
         {
-            return this.name + ", Has a friend called " + pet;
+            return this.name + " (" + this.type + ")";
         }
-
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace C_Sharp
 {
-    public class HealthStation
+    /*public class HealthStation
     {
         public int weighings;
 
@@ -25,5 +25,5 @@ namespace C_Sharp
         {
             person.weight += 1;
         }
-    }
+    }*/
 }
